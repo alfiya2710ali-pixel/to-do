@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stack — Daily Task List</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <header>
+    <span class="eyebrow">TO-DO</span>
+    <h1>Today's <span>tasks</span></h1>
+    <div class="date" id="today-date"></div>
+
+    <div class="progress-wrap">
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <span class="progress-label" id="progress-label">0/0 done</span>
+    </div>
+  </header>
+
+  <form id="task-form">
+    <input type="text" id="task-input" placeholder="Add a task…" aria-label="New task" autocomplete="off" required>
+    <button type="submit">Add</button>
+  </form>
+
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="active">Active</button>
+    <button class="filter-btn" data-filter="done">Done</button>
+  </div>
+
+  <ul class="list" id="task-list"></ul>
+  <div class="empty" id="empty-state" style="display:none;">
+    <span class="big">📝</span>
+    Nothing here yet — add your first task above.
+  </div>
+
+  <footer>Saved locally in your browser</footer>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
